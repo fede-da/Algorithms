@@ -14,7 +14,7 @@ void readInput(int& elements,int& limit){
     while(elements<=0 || limit>elements){
         std::cout << "How many elements the array will sort? \n";
         std::cin >> elements;
-        std::cout<<"How many elements of the array you want to print? (write the same number of above to print all, not more or the process will be restarted!)\n";
+        std::cout<<"How many elements of the array you want to get printed? (write the same number of above to print all, not more or the process will be restarted!)\n";
         std::cin>>limit;
         
     }
@@ -53,7 +53,7 @@ int main(int argc, const char * argv[]) {
 
     Timer t = Timer();
     
-    t.waitFor(array, solve      );
+    t.waitFor(array, solve );
     
     std::cout<<"Array sorted :\n";
     for(int i=0; i<limit;i++)

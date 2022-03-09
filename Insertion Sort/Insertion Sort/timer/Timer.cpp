@@ -13,7 +13,7 @@ class Timer{
 private:
     steady_clock::time_point start;
     steady_clock::time_point stop;
-    
+
 public:
     Timer(){}
     void startTimer(){
@@ -25,6 +25,7 @@ public:
         auto duration=duration_cast<seconds>(stop - start);
         std::cout << "Time elapsed : " << duration.count() <<" seconds" << std::endl<<std::endl;
     }
+    
     void waitFor(std::vector<int> &array, std::function<void(std::vector<int>&)> f)
     {
          this->startTimer();
