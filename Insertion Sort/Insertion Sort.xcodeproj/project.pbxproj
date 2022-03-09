@@ -30,7 +30,7 @@
 		331DB73327D81D4700503BDA /* array_generator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = array_generator.cpp; sourceTree = "<group>"; };
 		331DB73427D81D4700503BDA /* array_generator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = array_generator.hpp; sourceTree = "<group>"; };
 		331DB73727D823B100503BDA /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
-		331DB73927D8297D00503BDA /* Empty.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Empty.md; sourceTree = "<group>"; };
+		331DB73A27D82C5B00503BDA /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +63,10 @@
 		331DB72A27D815B700503BDA /* Insertion Sort */ = {
 			isa = PBXGroup;
 			children = (
+				331DB73A27D82C5B00503BDA /* ReadMe.md */,
 				331DB73627D823A100503BDA /* timer */,
 				331DB73227D81D2900503BDA /* array_generator */,
 				331DB72B27D815B700503BDA /* main.cpp */,
-				331DB73927D8297D00503BDA /* Empty.md */,
 			);
 			path = "Insertion Sort";
 			sourceTree = "<group>";
