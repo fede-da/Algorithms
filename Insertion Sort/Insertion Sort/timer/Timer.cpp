@@ -21,6 +21,6 @@ public:
     void stopTimer(){
         stop=high_resolution_clock::now();
         auto duration=duration_cast<seconds>(stop - start);
-        std::cout << "Time elapsed : " << duration.count() <<" seconds" << std::endl;
+        std::cout << "Time elapsed : " << duration.count() <<" seconds" << std::endl<<std::endl;
     }
 };

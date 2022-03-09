@@ -28,16 +28,31 @@ void solve(std::vector<int>& array){
 
 int main(int argc, const char * argv[]) {
     ArrayGenerator ag = ArrayGenerator();
-    int elements=0;
-    std::cout << "How many elements the array will sort? \n";
-    std::cin >> elements;
-    std::cout<<"Well then.\nGenerating array of length : " << elements << std::endl;
+    int elements = 0;
+    int limit = 1;
+    while(elements<=0 || limit>elements){
+        std::cout << "How many elements the array will sort? \n";
+        std::cin >> elements;
+        std::cout<<"How many elements of the array you want to print? (write the same number of above to print all, not more or the process will be restarted!)\n";
+        std::cin>>limit;
+        
+    }
+    std::cout<<"Well then.\nGenerating array of length : " << elements << std::endl<<std::endl;
     std::vector<int> array = ag.getRandomArrayOfN(elements);
+    std::cout<<"Print asked :\n";
+    for(int i=0; i<limit;i++)
+        std::cout<< array[i] << " ";
+    std::cout<< std::endl<<std::endl;
+
     Timer t = Timer();
     
     t.startTimer();
     solve(array);
     t.stopTimer();
+    std::cout<<"Array sorted :\n";
+    for(int i=0; i<limit;i++)
+        std::cout<< array[i] << " ";
+    std::cout<< std::endl<<std::endl;
     
     return 0;
 }

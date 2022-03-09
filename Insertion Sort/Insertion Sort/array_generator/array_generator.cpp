@@ -20,7 +20,7 @@ public:
         std::random_device rd;
         std::mt19937 mt(rd());
         std::uniform_int_distribution<int> dist(1, size<<3);
-        for(int i=size;i>=0;i--){
+        for(int i=size;i>0;i--){
             int res =dist(mt);
             array.push_back(res);
         }
