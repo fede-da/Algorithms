@@ -5,6 +5,7 @@
 //  Created by Federico D'Armini on 11/03/22.
 //
 
+#pragma once
 #include "printer.hpp"
 #include <iostream>
 #include <vector>
@@ -29,8 +30,9 @@ public :
     }
     
     Printer(){}
+    
     template <typename T>
-    void printArray(std::vector<T> &array){
+    const void printArray(std::vector<T> &array){
         std::cout<<"Printing array : ";
         for(T t : array)
             std::cout<<t<<" ";

@@ -16,11 +16,8 @@ int main(int argc, const char * argv[]) {
     Printer printer = Printer();
     printer.readInput();
     std::vector<int> array = generator.getRandomArrayOfN<int>(printer.getSize());
-    RecursiveMergeSort rms = RecursiveMergeSort(array);
-    printer.printArray(array,printer.getBegin(),printer.getEnd());
-    rms.mergesort(0, (int)array.size()-1);
-    std::vector<int>tmp{rms.getArray()};
-    printer.printArray(
-                       rms.getArray(),printer.getBegin(),printer.getEnd());
+    RecursiveMergeSort rms = RecursiveMergeSort(array,printer);
+    rms.solveIterative();
+    
     return 0;
 }
