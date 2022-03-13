@@ -27,11 +27,17 @@ public:
     }
     
     template <typename T>
-    
     void waitFor(std::vector<T> &array, std::function<void(std::vector<T>&)> f)
     {
          this->startTimer();
          f(array);
+         this->stopTimer();
+    }
+    
+    void waitFor2(std::function<void()> f)
+    {
+         this->startTimer();
+         f();
          this->stopTimer();
     }
 };

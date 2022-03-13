@@ -58,11 +58,10 @@ private:
         }
     }
     
+public:
     std::vector<int>& getArray(){
         return this->array;
     }
-    
-public:
     RecursiveMergeSort(std::vector<int>& input,Printer& newPrinter){
         this->array=input;
         this->printer=newPrinter;
