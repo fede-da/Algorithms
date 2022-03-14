@@ -26,6 +26,6 @@ public:
       start = clock::now();
   }
     void printTime(){
-        std::cout<<"Time elapsed (milliseconds) : "<< this->time_elapsed().count() << std::endl;
+        std::cout<<"Time elapsed (microseconds) : "<< this->time_elapsed().count() << std::endl;
     }
 };
