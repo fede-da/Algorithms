@@ -14,8 +14,8 @@ class Printer{
     
 private:
     int elements=0;
-    int begin=0;
-    int end=0;
+    int begin=-1;
+    int end=-1;
     
 public :
     
@@ -67,14 +67,18 @@ public :
     
     
     void readInput(){
-        while( elements<=0 || end>elements || begin>end ){
-            std::cout << "How many elements the array will sort? \n";
-            std::cin >> elements;
-            std::cout<<"How many elements of the array you want to get printed?\n";
-            std::cin>>end;
-            std::cout<<"Starting from index? (0 for default)\n";
-            std::cin>>begin;
-        }
+            while( elements <= 0 ){
+                std::cout << "How many elements the array will sort? \n";
+                std::cin >> elements;
+            }
+            while( end > elements || end < 0 ){
+                std::cout<<"How many elements of the array you want to get printed?\n";
+                std::cin>>end;
+            }
+            while( ( ( begin + end ) > elements ) || begin < 0 ){
+                std::cout<<"Starting from index? (0 for default)\n";
+                std::cin>>begin;
+            }
         return;
     }
     
