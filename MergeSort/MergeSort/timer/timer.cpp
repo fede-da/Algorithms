@@ -8,36 +8,24 @@
 #include <iostream>
 #include <vector>
 
-using namespace std::chrono;
-class Timer{
-private:
-    steady_clock::time_point start;
-    steady_clock::time_point stop;
-
+class Timer
+{
 public:
-    Timer(){}
-    void startTimer(){
-        std::cout<<"Starting timer\n";
-        start=high_resolution_clock::now();
-    }
-    void stopTimer(){
-        stop=high_resolution_clock::now();
-        auto duration=duration_cast<seconds>(stop - start);
-        std::cout << "Time elapsed : " << duration.count() <<" seconds" << std::endl<<std::endl;
-    }
-    
-    template <typename T>
-    void waitFor(std::vector<T> &array, std::function<void(std::vector<T>&)> f)
-    {
-         this->startTimer();
-         f(array);
-         this->stopTimer();
-    }
-    
-    void waitFor2(std::function<void()> f)
-    {
-         this->startTimer();
-         f();
-         this->stopTimer();
+  using clock = std::chrono::system_clock;
+  clock::time_point start;
+
+  Timer()
+    : start( clock::now() )
+  {}
+    auto time_elapsed() const
+  {
+      return clock::now() - start;
+  }
+    void reset()
+  {
+      start = clock::now();
+  }
+    void printTime(){
+        std::cout<<"Time elapsed (milliseconds) : "<< this->time_elapsed().count() << std::endl;
     }
 };

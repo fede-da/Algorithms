@@ -11,7 +11,7 @@
 
 #include "array_generator/array_generator.cpp"
 #include "printer/printer.cpp"
-#include "recursive_merge_sort/recursive_merge_sort.cpp"
+#include "merge_sort/merge_sort.cpp"
 #include "timer/timer.cpp"
 
 void doNothing(){
@@ -21,11 +21,16 @@ void doNothing(){
 int main(int argc, const char * argv[]) {
     ArrayGenerator generator = ArrayGenerator();
     Printer printer = Printer();
-    Timer t = Timer();
     printer.readInput();
     std::vector<int> array = generator.getRandomArrayOfN<int>(printer.getSize());
-    RecursiveMergeSort rms = RecursiveMergeSort(array,printer);
-    t.waitFor2([&](){ rms.solveIterative(); });
+    MergeSort ms = MergeSort(array,printer);
+    Timer t ;
+    ms.solveIterative();
+    t.printTime();
+    ms.setNewArray(array);
+    t.reset();
+    ms.solveRecursive();
+    t.printTime();
     
     return 0;
 }

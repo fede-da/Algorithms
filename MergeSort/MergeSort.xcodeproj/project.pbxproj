@@ -11,7 +11,7 @@
 		331DB78627DAC5C100503BDA /* array_generator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 331DB78227DAC5C100503BDA /* array_generator.cpp */; };
 		331DB78727DAC5C100503BDA /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 331DB78427DAC5C100503BDA /* timer.cpp */; };
 		3374711827DB6016007865DC /* printer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3374711627DB6016007865DC /* printer.cpp */; };
-		3374711C27DB665D007865DC /* recursive_merge_sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3374711A27DB665D007865DC /* recursive_merge_sort.cpp */; };
+		3374711C27DB665D007865DC /* merge_sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3374711A27DB665D007865DC /* merge_sort.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,8 +35,8 @@
 		331DB78527DAC5C100503BDA /* timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = timer.hpp; sourceTree = "<group>"; };
 		3374711627DB6016007865DC /* printer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = printer.cpp; sourceTree = "<group>"; };
 		3374711727DB6016007865DC /* printer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = printer.hpp; sourceTree = "<group>"; };
-		3374711A27DB665D007865DC /* recursive_merge_sort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = recursive_merge_sort.cpp; sourceTree = "<group>"; };
-		3374711B27DB665D007865DC /* recursive_merge_sort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = recursive_merge_sort.hpp; sourceTree = "<group>"; };
+		3374711A27DB665D007865DC /* merge_sort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = merge_sort.cpp; sourceTree = "<group>"; };
+		3374711B27DB665D007865DC /* merge_sort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = merge_sort.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 		331DB76E27DAC4CD00503BDA /* MergeSort */ = {
 			isa = PBXGroup;
 			children = (
-				3374711927DB6619007865DC /* recursive_merge_sort */,
+				3374711927DB6619007865DC /* merge_sort */,
 				3374711527DB6016007865DC /* printer */,
 				331DB78027DAC5C100503BDA /* array_generator */,
 				331DB78327DAC5C100503BDA /* timer */,
@@ -107,13 +107,13 @@
 			path = printer;
 			sourceTree = "<group>";
 		};
-		3374711927DB6619007865DC /* recursive_merge_sort */ = {
+		3374711927DB6619007865DC /* merge_sort */ = {
 			isa = PBXGroup;
 			children = (
-				3374711A27DB665D007865DC /* recursive_merge_sort.cpp */,
-				3374711B27DB665D007865DC /* recursive_merge_sort.hpp */,
+				3374711A27DB665D007865DC /* merge_sort.cpp */,
+				3374711B27DB665D007865DC /* merge_sort.hpp */,
 			);
-			path = recursive_merge_sort;
+			path = merge_sort;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3374711C27DB665D007865DC /* recursive_merge_sort.cpp in Sources */,
+				3374711C27DB665D007865DC /* merge_sort.cpp in Sources */,
 				3374711827DB6016007865DC /* printer.cpp in Sources */,
 				331DB77027DAC4CD00503BDA /* main.cpp in Sources */,
 				331DB78627DAC5C100503BDA /* array_generator.cpp in Sources */,

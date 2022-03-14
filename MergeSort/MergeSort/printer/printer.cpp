@@ -42,7 +42,8 @@ public :
     template <typename T>
     void printArray(std::vector<T>& array,int left,int right){
         std::cout<<"Printing array from index "<<left<<" to "<<right<<" :\n";
-        for(int i=left;i<right;i++)
+        int sum = right+left;
+        for(int i=left;i<sum;i++)
             std::cout<<array[i]<<" ";
         std::cout<<std::endl;
     }

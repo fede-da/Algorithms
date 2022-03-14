@@ -5,8 +5,8 @@
 //  Created by Federico D'Armini on 11/03/22.
 //
 
-#ifndef recursive_merge_sort_hpp
-#define recursive_merge_sort_hpp
+#ifndef merge_sort_hpp
+#define merge_sort_hpp
 
 #include <stdio.h>
 

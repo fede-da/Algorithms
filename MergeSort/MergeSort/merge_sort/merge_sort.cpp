@@ -6,7 +6,7 @@
 //
 
 #pragma once
-#include "recursive_merge_sort.hpp"
+#include "merge_sort.hpp"
 
 #include <iostream>
 #include <vector>
@@ -14,7 +14,7 @@
 #include <cmath>
 
 
-class RecursiveMergeSort{
+class MergeSort{
 private:
     std::vector<int> array{};
     Printer printer;
@@ -58,23 +58,26 @@ private:
         }
     }
     
+    
+    
 public:
-    std::vector<int>& getArray(){
-        return this->array;
-    }
-    RecursiveMergeSort(std::vector<int>& input,Printer& newPrinter){
+    MergeSort(std::vector<int> input,Printer& newPrinter){
         this->array=input;
         this->printer=newPrinter;
     }
     
+    std::vector<int>& getArray(){
+        return this->array;
+    }
+    
     void solveRecursive(){
-        printer.printArray(this->getArray());
+        printer.printArray(this->getArray(),printer.getBegin(),printer.getEnd());
         this->mergesort(0, (int) this->array.size()-1);
         printer.printArray(this->getArray(),printer.getBegin(),printer.getEnd());
     }
     
     void solveIterative(){
-        printer.printArray(this->getArray());
+        printer.printArray(this->getArray(),printer.getBegin(),printer.getEnd());
         this->iterativeMergeSort();
         printer.printArray(this->getArray(),printer.getBegin(),printer.getEnd());
     }
@@ -115,5 +118,9 @@ public:
             }
             times--;
         }
+    }
+    template <typename T>
+    void setNewArray(std::vector<T> newArray){
+        this->array=newArray;
     }
 };
