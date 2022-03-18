@@ -81,7 +81,7 @@ std::vector<std::vector<T>> recursive_square_matrix_multiply(std::vector<std::ve
 }
 
 int main(int argc, const char * argv[]) {
-    int size = 2000;
+    int size = 20;
     std::vector<std::vector<int>> A = generateRandomMatrix<int>(size);
     std::vector<std::vector<int>> B = generateRandomMatrix<int>(size);
     Timer t;
